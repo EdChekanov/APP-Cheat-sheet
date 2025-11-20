@@ -1,4 +1,4 @@
-import { HashRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import './App.scss';
 
@@ -23,7 +23,7 @@ import NotFound from './components/content/NotFound.jsx';
 function App() {
   return (
     <>
-      <HashRouter>
+      <BrowserRouter basename="/APP-Cheat-sheet">
         <Routes>
           <Route path="/" element={<MainLayout />}>
             <Route index element={<Intro />} />
@@ -47,7 +47,7 @@ function App() {
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
-      </HashRouter>
+      </BrowserRouter>
     </>
   );
 }
